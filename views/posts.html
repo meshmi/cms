@@ -1,0 +1,10 @@
+<p>
+  <label>Buscar: </label>
+  <input type="text" ng-model="searchTerm">
+</p>
+
+<ul>
+  <li ng-repeat="post in posts|postSearchFilter:searchTerm">
+    <a href="#/posts/{{ post.sha }}">{{ post.name }}</a>
+  </li>
+</ul>
